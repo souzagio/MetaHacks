@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51D0BA5A-F000-4B4A-92EE-5ACE2C0CB9CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MetaHacks</RootNamespace>
+    <AssemblyName>MetaHacks</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1489186758-dangerelectricity-riskhigh-voltageconstruction_81814.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentEmail.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentEmail.Core.3.0.0\lib\netstandard2.0\FluentEmail.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentEmail.Smtp, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentEmail.Smtp.3.0.0\lib\netstandard2.0\FluentEmail.Smtp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Pictures\program\incone\mysql-connector-net-8.0.25-noinstall\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Siticone.Desktop.UI, Version=2.0.7.0, Culture=neutral, PublicKeyToken=8007fe7702ed05c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Siticone.Desktop.UI.2.0.7\lib\net40\Siticone.Desktop.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControleLogin\Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleLogin\Cadastro.Designer.cs">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogos\CodeVein.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogos\CodeVein.Designer.cs">
+      <DependentUpon>CodeVein.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControleLogin\Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleLogin\Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassesDeApoio\Float.cs" />
+    <Compile Include="Jogos\DigimonCS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogos\DigimonCS.Designer.cs">
+      <DependentUpon>DigimonCS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogos\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogos\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogos\FormOpDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogos\FormOpDS.Designer.cs">
+      <DependentUpon>FormOpDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassesDeApoio\Games.cs" />
+    <Compile Include="ControleLogin\gerar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleLogin\gerar.Designer.cs">
+      <DependentUpon>gerar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassesDeApoio\Intermed.cs" />
+    <Compile Include="Jogos\JumpForce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogos\JumpForce.Designer.cs">
+      <DependentUpon>JumpForce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogos\Kakarot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogos\Kakarot.Designer.cs">
+      <DependentUpon>Kakarot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControleLogin\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleLogin\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoryHelper Updated.cs" />
+    <Compile Include="ControleLogin\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleLogin\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControleLogin\Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleLogin\Perfil.Designer.cs">
+      <DependentUpon>Perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ControleLogin\RecSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleLogin\RecSenha.Designer.cs">
+      <DependentUpon>RecSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControleLogin\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleLogin\Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogos\SSSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogos\SSSS.Designer.cs">
+      <DependentUpon>SSSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TesteBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesteBD.Designer.cs">
+      <DependentUpon>TesteBD.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ControleLogin\Cadastro.resx">
+      <DependentUpon>Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jogos\CodeVein.resx">
+      <DependentUpon>CodeVein.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleLogin\Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jogos\DigimonCS.resx">
+      <DependentUpon>DigimonCS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jogos\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jogos\FormOpDS.resx">
+      <DependentUpon>FormOpDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleLogin\gerar.resx">
+      <DependentUpon>gerar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jogos\JumpForce.resx">
+      <DependentUpon>JumpForce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jogos\Kakarot.resx">
+      <DependentUpon>Kakarot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleLogin\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleLogin\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleLogin\Perfil.resx">
+      <DependentUpon>Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ControleLogin\RecSenha.resx">
+      <DependentUpon>RecSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControleLogin\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jogos\SSSS.resx">
+      <DependentUpon>SSSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TesteBD.resx">
+      <DependentUpon>TesteBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1489186758-dangerelectricity-riskhigh-voltageconstruction_81814.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon %287%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1489186758-dangerelectricity-riskhigh-voltageconstruction_81814.ico" />
+    <None Include="Resources\actve.wav" />
+    <None Include="Resources\deact.wav" />
+    <None Include="Resources\actv.wav" />
+    <None Include="Resources\act.wav" />
+    <None Include="Resources\kakarot.jpg" />
+    <None Include="Resources\S_k3-hIc6CpYEFwgVtSYrz1lcsygkgXdqpNQRzWXhAE_350x200_1x-0.jpeg" />
+    <None Include="Resources\250px-Saint_Seiya_Soldiers_Soul.jpg" />
+    <None Include="Resources\devi.png" />
+    <None Include="Resources\codevein.jpg" />
+    <None Include="Resources\dash_icon_143612.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\diferent.png" />
+    <None Include="Resources\1489186758-dangerelectricity-riskhigh-voltageconstruction_818141.ico" />
+    <None Include="Resources\favicon %2813%29.ico" />
+    <None Include="Resources\relógio.jpg" />
+    <None Include="Resources\bac.ico" />
+    <None Include="Resources\digiing.jpg" />
+    <None Include="Resources\favicon %2812%29.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
